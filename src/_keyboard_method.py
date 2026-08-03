@@ -75,7 +75,6 @@ def _get_key(key_map: dict[str, str] = _DEFAULT_KEY_MAP) -> str | None:
     return key_map.get(key_code) or key_code.isprintable() and key_code
 
 
-def keyboard_loop(callback):
-    while True:
-        if char := _get_key():
-            callback(char)
+def keyboard_listening(callback):
+    while callback(_get_key()):
+        pass
