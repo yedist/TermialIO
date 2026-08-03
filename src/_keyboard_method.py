@@ -76,5 +76,4 @@ def _get_key(key_map: dict[str, str] = _DEFAULT_KEY_MAP) -> str | None:
 
 
 def keyboard_listening(callback):
-    while callback(_get_key()):
-        pass
+    while callback(_get_key()): pass
