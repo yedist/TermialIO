@@ -1,7 +1,7 @@
 from keyboard_method_abc import KeyboardMethod
 
 
-class ClassicInput:
+class ClassicInput(KeyboardMethod):
     def __init__(self):
         self.value = ""
 
